@@ -32,18 +32,17 @@ footer {
     display: flex;
     overflow-x: auto;
     padding: 20px 0;
-    white-space: nowrap; /* This prevents the items from wrapping to the next line */
-}
+    white-space: nowrap;
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+  }
 
 .scroll-item {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    text-align: center;
-    color: white;
-    text-decoration: none; /* This removes the underline from the links */
+  flex: 0 0 auto;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
 }
 
-.scroll-item img {
-    width: 200px;
-    height: 200px;
+.scroll-item p {
+  margin: 10px 0;
 }
