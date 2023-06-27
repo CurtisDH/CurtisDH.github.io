@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let isHovered = false;
   let scrollTimeout;
   let swapSide = false;
-  const scrollSpeed = 1;
-  const scrollStep = 1;
+  const scrollSpeed = 35; // Increase the value to slow down the scroll speed
+  const scrollStep = 1; // This is now 1 pixel per scroll
+  const scrollWheelStep = 25; // Num pixels per scroll event
   let isDragging = false;
   let startX;
   let scrollLeft;
   let dragEndTimeout;
+  let startTime = null;
 
   // Get all video overlays
   const videoOverlays = document.querySelectorAll(".video-overlay");
@@ -32,32 +34,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  function autoScroll() {
-    clearTimeout(scrollTimeout); // Clear the previous autoScroll function
-
+  function autoScroll(timestamp) {
     if (!isHovered && !isDragging) {
-      if (!swapSide) {
-        // Scroll to the right
-        scrollContainer.scrollLeft += scrollStep;
-        if (
-          scrollContainer.scrollLeft >=
-          scrollContainer.scrollWidth - scrollContainer.offsetWidth
-        ) {
-          // Reached the end, change direction
-          swapSide = true;
+      if (!startTime) startTime = timestamp;
+
+      const elapsed = timestamp - startTime;
+
+      if (elapsed > scrollSpeed) {
+        if (!swapSide) {
+          // Scroll to the right
+          scrollContainer.scrollLeft += scrollStep;
+          if (
+            scrollContainer.scrollLeft >=
+            scrollContainer.scrollWidth - scrollContainer.offsetWidth
+          ) {
+            // Reached the end, change direction
+            swapSide = true;
+          }
+        } else {
+          // Scroll to the left
+          scrollContainer.scrollLeft -= scrollStep;
+          if (scrollContainer.scrollLeft <= 0) {
+            // Reached the beginning, change direction
+            swapSide = false;
+          }
         }
-      } else {
-        // Scroll to the left
-        scrollContainer.scrollLeft -= scrollStep;
-        if (scrollContainer.scrollLeft <= 0) {
-          // Reached the beginning, change direction
-          swapSide = false;
-        }
+        startTime = timestamp;
       }
     }
-
-    scrollTimeout = setTimeout(autoScroll, scrollSpeed);
+    requestAnimationFrame(autoScroll);
   }
+
+  // Start the initial auto-scroll
+  requestAnimationFrame(autoScroll);
 
   function handleMouseDown(e) {
     isDragging = true;
@@ -84,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // prevent the default behavior
       e.preventDefault();
       // scroll the container
-      this.scrollLeft += e.deltaY;
+      this.scrollLeft += Math.sign(e.deltaY) * scrollWheelStep;
     },
     { passive: false }
   ); // added this to ensure the preventDefault() works as expected

@@ -10,6 +10,10 @@
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
   }
   
   header {
@@ -29,7 +33,6 @@
   section {
     margin-bottom: 50px;
     padding: 30px;
-    border-left: 4px solid #0f0f0f;
     animation: slideInRight 2s ease;
   }
   
