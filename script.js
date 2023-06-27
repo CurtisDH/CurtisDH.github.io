@@ -74,6 +74,18 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollContainer.scrollLeft = scrollLeft + scrollAmount;
   });
 
+  // handle scroll wheel event
+  scrollContainer.addEventListener(
+    "wheel",
+    function (e) {
+      // prevent the default behavior
+      e.preventDefault();
+      // scroll the container
+      this.scrollLeft += e.deltaY;
+    },
+    { passive: false }
+  ); // added this to ensure the preventDefault() works as expected
+
   window.addEventListener("mouseup", function () {
     clearTimeout(dragEndTimeout);
     isDragging = false; // Setting isDragging to false immediately
