@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function autoScroll() {
+    clearTimeout(scrollTimeout); // Clear the previous autoScroll function
+
     if (!isHovered && !isDragging) {
       if (!swapSide) {
         // Scroll to the right
@@ -53,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     }
+
     scrollTimeout = setTimeout(autoScroll, scrollSpeed);
   }
 
