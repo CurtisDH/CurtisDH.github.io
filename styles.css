@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: grey !important;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+section {
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    white-space: nowrap; /* This prevents the items from wrapping to the next line */
+}
+
+.scroll-item {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none; /* This removes the underline from the links */
+}
+
+.scroll-item img {
+    width: 200px;
+    height: 200px;
+}
