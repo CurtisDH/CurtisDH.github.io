@@ -34,23 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const videoContainer = document.querySelectorAll(".video-container");
-
-  videoContainer.forEach((container) => {
-    const videoOverlay = container.querySelector(".video-overlay");
-    const iframe = container.querySelector("iframe");
-
-    videoOverlay.addEventListener("click", () => {
-      videoOverlay.style.display = "none";
-      iframe.style.pointerEvents = "all";
-    });
-
-    container.addEventListener("mouseleave", () => {
-      videoOverlay.style.display = "block";
-      iframe.style.pointerEvents = "none";
-    });
-  });
-
   function autoScroll(timestamp) {
     if (!isHovered && !isDragging) {
       if (!startTime) startTime = timestamp;
@@ -111,6 +94,14 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       // scroll the container
       this.scrollLeft += Math.sign(e.deltaY) * scrollWheelStep;
+
+      // Pause auto-scrolling when scrolling with the wheel
+      clearTimeout(scrollTimeout);
+      isHovered = true;
+      scrollTimeout = setTimeout(() => {
+        isHovered = false;
+        autoScroll();
+      }, 3000);
     },
     { passive: false }
   ); // added this to ensure the preventDefault() works as expected
