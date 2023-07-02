@@ -12,7 +12,6 @@ class Project {
       response = await fetch("../../HTML/scrollItemTemplateImage.html");
     }
     let template = await response.text();
-    console.log(template);
     let tempDiv = document.createElement("div");
     tempDiv.innerHTML = template.trim();
     let projectElement = tempDiv.firstChild;
@@ -64,48 +63,56 @@ class Project {
   }
 }
 
-let AudioVisualiser = new Project(
-  "https://www.youtube.com/embed/EE9si3eyNik",
-  "https://github.com/CurtisDH/LEDVisualiserAudioClient",
-  "C# - Led Audio Visualiser 2022"
-);
-AudioVisualiser.render().then((AudioVisualiser) => {
-  document.querySelector(".scroll-container").append(AudioVisualiser);
-});
-
-let Sudoku = new Project(
-  "../images/Sudoku.png",
-  "https://github.com/CurtisDH/SudokuSolver",
-  "C# - Sudoku Solver 2023",
-  false
-);
-Sudoku.render().then((Sudoku) => {
-  document.querySelector(".scroll-container").append(Sudoku);
-});
-
-let GMTK = new Project(
-  "https://www.youtube.com/embed/pfC0CL8QjNM",
-  "",
-  "GMTK GameJam - 2020"
-);
-GMTK.render().then((GMTK) => {
-  document.querySelector(".scroll-container").append(GMTK);
-});
-
-let OtherGameJam = new Project(
-  "https://www.youtube.com/embed/XO7lElw7M-Q",
-  "",
-  "24hr 2D Game 2020"
-);
-OtherGameJam.render().then((OtherGameJam) => {
-  document.querySelector(".scroll-container").append(OtherGameJam);
-});
-
-let UnityIntegration = new Project(
-  "https://www.youtube.com/embed/mr-SBXM-570",
-  "https://github.com/CurtisDH/Unity-PayPal-Integration",
-  "Unity + PayPal 2020"
-);
-UnityIntegration.render().then((UnityIntegration) => {
-  document.querySelector(".scroll-container").append(UnityIntegration);
-});
+const projects = [
+  new Project(
+    "https://www.youtube.com/embed/EE9si3eyNik",
+    "https://github.com/CurtisDH/LEDVisualiserAudioClient",
+    "C# - Led Audio Visualiser 2022"
+  ),
+  new Project(
+    "../images/Sudoku.png",
+    "https://github.com/CurtisDH/SudokuSolver",
+    "C# - Sudoku Solver 2023",
+    false
+  ),
+  new Project(
+    "https://www.youtube.com/embed/pfC0CL8QjNM",
+    "",
+    "GMTK GameJam - 2020"
+  ),
+  new Project(
+    "https://www.youtube.com/embed/XO7lElw7M-Q",
+    "",
+    "24hr 2D Game 2020"
+  ),
+  new Project(
+    "https://www.youtube.com/embed/mr-SBXM-570",
+    "https://github.com/CurtisDH/Unity-PayPal-Integration",
+    "Unity + PayPal 2020"
+  ),
+  new Project(
+    "",
+    "https://github.com/CurtisDH/SpigotAutoSort",
+    "Java - Spigot Auto Sort 2021"
+  ),
+  new Project(
+    "",
+    "https://github.com/CurtisDH/Multi-ThreadedPrimeFinder",
+    "C# - MultiThreaded Prime Finder 2021"
+  ),
+  new Project(
+    "",
+    "https://github.com/CurtisDH/ITP-2020",
+    "Unity GameDevHQ BootCamp 2020"
+  ),
+];
+Promise.all(projects.map((project) => project.render()))
+  .then((renderedProjects) => {
+    const scrollContainer = document.querySelector(".scroll-container");
+    renderedProjects.forEach((project) => {
+      scrollContainer.append(project);
+    });
+  })
+  .catch((error) => {
+    console.error("Error rendering projects:", error);
+  });
