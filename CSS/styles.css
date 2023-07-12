@@ -37,7 +37,23 @@ section {
   animation: slideInRight 2s ease;
 }
 
-.scroll-container {
+.scroll-container-projects {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  animation: slideInLeft 2s ease;
+}
+
+.scroll-container-education {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  animation: slideInLeft 2s ease;
+}
+
+.scroll-container-experience {
   display: flex;
   overflow-x: auto;
   gap: 20px;

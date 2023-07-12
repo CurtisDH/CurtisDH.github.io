@@ -1,9 +1,10 @@
-class Project {
-  constructor(embedUrl, githubUrl, title, video = true) {
-    this.embedUrl = embedUrl;
-    this.githubUrl = githubUrl;
-    this.title = title;
-    this.video = video;
+class Experience {
+  constructor(companyName, role, dateStart, dateEnd, description) {
+    this.companyName = companyName;
+    this.role = role;
+    this.dateStart = dateStart;
+    this.dateEnd = dateEnd;
+    this.description = description;
   }
 
   async render() {
@@ -54,9 +55,7 @@ class Project {
     }
 
     // Get the scroll-container element
-    const scrollContainer = document.querySelector(
-      ".scroll-container-projects"
-    );
+    const scrollContainer = document.querySelector(".scroll-container");
     if (scrollContainer) {
       scrollContainer.append(projectElement);
     }
@@ -64,59 +63,3 @@ class Project {
     return projectElement;
   }
 }
-
-const projects = [
-  new Project(
-    "https://www.youtube.com/embed/EE9si3eyNik",
-    "https://github.com/CurtisDH/LEDVisualiserAudioClient",
-    "C# - Led Audio Visualiser 2022"
-  ),
-  new Project(
-    "../images/Sudoku.png",
-    "https://github.com/CurtisDH/SudokuSolver",
-    "C# - Sudoku Solver 2023",
-    false
-  ),
-  new Project(
-    "https://www.youtube.com/embed/pfC0CL8QjNM",
-    "",
-    "GMTK GameJam - 2020"
-  ),
-  new Project(
-    "https://www.youtube.com/embed/XO7lElw7M-Q",
-    "",
-    "24hr 2D Game 2020"
-  ),
-  new Project(
-    "https://www.youtube.com/embed/mr-SBXM-570",
-    "https://github.com/CurtisDH/Unity-PayPal-Integration",
-    "Unity + PayPal 2020"
-  ),
-  new Project(
-    "",
-    "https://github.com/CurtisDH/SpigotAutoSort",
-    "Java - Spigot Auto Sort 2021"
-  ),
-  new Project(
-    "",
-    "https://github.com/CurtisDH/Multi-ThreadedPrimeFinder",
-    "C# - MultiThreaded Prime Finder 2021"
-  ),
-  new Project(
-    "",
-    "https://github.com/CurtisDH/ITP-2020",
-    "Unity GameDevHQ BootCamp 2020"
-  ),
-];
-Promise.all(projects.map((project) => project.render()))
-  .then((renderedProjects) => {
-    const scrollContainer = document.querySelector(
-      ".scroll-container-projects"
-    );
-    renderedProjects.forEach((project) => {
-      scrollContainer.append(project);
-    });
-  })
-  .catch((error) => {
-    console.error("Error rendering projects:", error);
-  });
