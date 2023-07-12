@@ -1,0 +1,74 @@
+.scroll-item-education {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  border: 1px solid #0f0f0f;
+  padding: 20px;
+  text-align: left; /* Align content to the left */
+  background: #1a1a1d;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: slideInLeft 2s ease;
+}
+
+.scroll-item-education .heading-container {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  color: #fff;
+  padding: 10px;
+}
+
+.scroll-item-education .institution {
+  font-size: 18px;
+  color: rgb(0, 177, 247);
+  font-weight: nr;
+}
+
+.scroll-item-education .degree {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.scroll-item-education .duration {
+  font-size: 12px;
+  color: #fff;
+}
+
+.scroll-item-education .duration-container {
+  background-color: #1e90ff;
+  padding: 1px 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.scroll-item-education .desc {
+  font-size: 14px;
+  color: #ffffff;
+
+  align-items: center;
+}
+
+.scroll-item-education .gpa {
+  font-size: 12px;
+  color: #fff;
+}
+
+.scroll-item-education .gpa-container {
+  position: relative;
+  bottom: auto !important;
+  left: auto;
+  background-color: #15ff00ad;
+  padding: 1px 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}

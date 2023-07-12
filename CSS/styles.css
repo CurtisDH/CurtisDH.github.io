@@ -61,7 +61,25 @@ section {
   animation: slideInLeft 2s ease;
 }
 
-.scroll-item {
+.scroll-item-projects {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 500px;
+  border-radius: 5px;
+  border: 1px solid #0f0f0f;
+  padding: 20px;
+  text-align: center;
+  background: #1a1a1d;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.scroll-item-experience {
   flex: 0 0 auto;
   width: 200px;
   height: 500px;

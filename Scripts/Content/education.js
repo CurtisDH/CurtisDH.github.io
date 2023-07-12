@@ -1,65 +1,95 @@
 class Education {
-    constructor(embedUrl, githubUrl, title, video = true) {
-      this.embedUrl = embedUrl;
-      this.githubUrl = githubUrl;
-      this.title = title;
-      this.video = video;
-    }
-  
-    async render() {
-      let response = await fetch("../../HTML/scrollItemTemplate.html");
-      if (this.video == false) {
-        response = await fetch("../../HTML/scrollItemTemplateImage.html");
-      }
-      let template = await response.text();
-      let tempDiv = document.createElement("div");
-      tempDiv.innerHTML = template.trim();
-      let projectElement = tempDiv.firstChild;
-  
-      // Target and modify the title
-      const titleElement = projectElement.querySelector(".heading-container h3");
-      if (titleElement) {
-        titleElement.textContent = this.title;
-      }
-  
-      if (this.video) {
-        // Target and modify the iframe source (src)
-        const iframeElement = projectElement.querySelector(
-          ".video-container iframe"
-        );
-        if (iframeElement) {
-          iframeElement.src = this.embedUrl;
-        }
-      } else {
-        const imageElement = projectElement.querySelector(".video-container img");
-        if (imageElement) {
-          imageElement.src = this.embedUrl;
-          // Modify the width and height attributes
-          imageElement.width = 200;
-          imageElement.height = 400;
-        }
-      }
-  
-      // Target and modify the repository link
-      const repoLinkElement = projectElement.querySelector(".repo-link");
-      if (repoLinkElement) {
-        repoLinkElement.href = this.githubUrl;
-        if (this.githubUrl == "") {
-          // set to default
-          repoLinkElement.href = "https://github.com/CurtisDH";
-  
-          // Target and modify the "GitHub Repository" text
-          repoLinkElement.textContent = "No GitHub Repository";
-        }
-      }
-  
-      // Get the scroll-container element
-      const scrollContainer = document.querySelector(".scroll-container");
-      if (scrollContainer) {
-        scrollContainer.append(projectElement);
-      }
-  
-      return projectElement;
-    }
+  constructor(institution, degree, duration, description, gpa) {
+    this.institution = institution;
+    this.degree = degree;
+    this.duration = duration;
+    this.gpa = gpa;
+    this.description = description;
   }
-  
+  // TODO add image support
+  async render() {
+    let response = await fetch("../../HTML/Templates/education.html");
+
+    let template = await response.text();
+    let tempDiv = document.createElement("div");
+    tempDiv.innerHTML = template.trim();
+    let element = tempDiv.firstChild;
+
+    // Target and modify the title
+    const institution = element.querySelector(".institution");
+    const degree = element.querySelector(".degree");
+    const duration = element.querySelector(".duration");
+    const gpa = element.querySelector(".gpa");
+    const description = element.querySelector(".desc");
+
+    if (institution) {
+      institution.textContent = this.institution;
+    }
+
+    if (degree) {
+      degree.textContent = this.degree;
+    }
+
+    if (duration) {
+      duration.textContent = this.duration;
+    }
+
+    if (gpa) {
+      gpa.textContent = this.gpa;
+    }
+    if (description) {
+      description.textContent = this.description;
+    }
+
+    // Get the scroll-container element
+    const scrollContainer = document.querySelector(".scroll-container");
+    if (scrollContainer) {
+      scrollContainer.append(element);
+    }
+
+    return element;
+  }
+}
+
+const education = [
+  new Education(
+    "Queensland University of Technology",
+    "Bachelor of Information Technology - Computer Science",
+    "March 2022 - November 2023",
+    "Majoring in Computer Science, achieved GPA of 7.0 in Discrete Mathematics, Algorithms & Time Complexity, currently undertaking: High Performance Parallel Computing, Cloud Computing (with an AWS focus), and Systems Programming (Focus on low level programming)",
+    "Overall GPA 6.0"
+  ),
+  new Education(
+    "TAFE Queensland",
+    "Diploma of Computer Systems Networking and Telecommunications",
+    "January 2021 - December 2021",
+    "Emphasised a great understand of theoretical and physical computer networking infrastructure. Worked heavily with virtual machines and Linux. Worked heavily with CISCO switches, routers, and wireless access points. Great understanding of network protocols and security implementations",
+    "Diploma Awarded"
+  ),
+  new Education(
+    "TAFE Queensland",
+    "Certificate III in Game and Interactive Media Design",
+    "January 2016 - December 2018",
+    "Completed this Certificate while undertaking High school. The course was focused on design, 3D modelling, media editing (Photoshop, Premier pro, Illustrator etc.) Created a great understanding of how users interact with designed environments & software",
+    "Certificate Awarded"
+  ),
+  new Education(
+    "Cannon Hill Anglican College",
+    "Queensland Certificate of Education & Certificate III in Business",
+    "January 2014 - December 2018",
+    "Grade 12 Highschool education. Also undertook a Certificate III in Business along side a second certificate from TAFE. Queensland Certificate of Education was awarded upon graduation alongside a Certificate III in Business & Certificate III in Game and Interactive Media Design.",
+    "Certificates Awarded"
+  ),
+];
+Promise.all(education.map((education) => education.render()))
+  .then((renderedEducation) => {
+    const scrollContainer = document.querySelector(
+      ".scroll-container-education"
+    );
+    renderedEducation.forEach((project) => {
+      scrollContainer.append(project);
+    });
+  })
+  .catch((error) => {
+    console.error("Error rendering projects:", error);
+  });
