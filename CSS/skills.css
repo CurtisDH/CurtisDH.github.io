@@ -1,0 +1,43 @@
+
+.skills-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease;
+    gap: 30px;
+}
+
+
+.skills-container a {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+
+.skills-container img {
+    text-decoration: none;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.section img:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+}

@@ -1,0 +1,43 @@
+{
+  "Skills/Webstacks": [
+    "css-3.svg",
+    "html-5.svg"
+  ],
+  "Skills/Languages": [
+    "java.svg",
+    "javascript.svg",
+    "python.svg",
+    "c.svg",
+    "c-sharp.svg",
+    "c-plusplus.svg"
+  ],
+  "Skills/Databases": [
+    "mysql.svg",
+    "mongodb-icon.svg"
+  ],
+  "Skills/IDEs": [
+    "visual-studio-code.svg",
+    "visual-studio.svg",
+    "pycharm.svg",
+    "clion.svg",
+    "rider.svg",
+    "webstorm.svg"
+  ],
+  "Skills/Project Management": [
+    "asana.svg",
+    "trello.svg",
+    "jira.svg"
+  ],
+  "Skills/Frameworks": [
+    "react.svg",
+    "unity.svg",
+    "platformio.svg",
+    "dotnet.svg"
+  ],
+  "Skills/Operating Systems": [
+    "ubuntu.svg",
+    "archlinux.svg",
+    "linux-tux.svg",
+    "microsoft-windows-icon.svg"
+  ]
+}
