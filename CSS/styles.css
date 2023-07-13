@@ -1,217 +1,205 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background: #1a1a1d;
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 20px;
+    font-family: "Poppins", sans-serif;
+    background: #1a1a1d;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
 }
 
-header {
-  background: #1a1a1d;
-  padding: 10px 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
 h1,
 h2 {
-  margin-bottom: 20px;
-  animation: fadeInDown 2s ease;
+    margin-bottom: 20px;
+    animation: fadeInDown 2s ease;
 }
 
 section {
-  margin-bottom: 50px;
-  padding: 30px;
-  animation: slideInRight 2s ease;
+    margin-bottom: 50px;
+    padding: 30px;
+    animation: slideInRight 2s ease;
 }
 
 .scroll-container-projects {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px 0;
-  animation: slideInLeft 2s ease;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    animation: slideInLeft 2s ease;
 }
 
 .scroll-container-education {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px 0;
-  animation: slideInLeft 2s ease;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    animation: slideInLeft 2s ease;
 }
 
 .scroll-container-experience {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px 0;
-  animation: slideInLeft 2s ease;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    animation: slideInLeft 2s ease;
 }
 
 .scroll-item-projects {
-  flex: 0 0 auto;
-  width: 200px;
-  height: 500px;
-  border-radius: 5px;
-  border: 1px solid #0f0f0f;
-  padding: 20px;
-  text-align: center;
-  background: #1a1a1d;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 0 0 auto;
+    width: 200px;
+    height: 500px;
+    border-radius: 5px;
+    border: 1px solid #0f0f0f;
+    padding: 20px;
+    text-align: center;
+    background: #1a1a1d;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 
 
 .scroll-item-experience {
-  flex: 0 0 auto;
-  width: 200px;
-  height: 500px;
-  border-radius: 5px;
-  border: 1px solid #0f0f0f;
-  padding: 20px;
-  text-align: center;
-  background: #1a1a1d;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 0 0 auto;
+    width: 200px;
+    height: 500px;
+    border-radius: 5px;
+    border: 1px solid #0f0f0f;
+    padding: 20px;
+    text-align: center;
+    background: #1a1a1d;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .video-container {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  padding-bottom: 56.25%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding-bottom: 56.25%;
+    overflow: hidden;
 }
 
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .heading-container {
-  z-index: 2;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding: 10px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
 }
+
 .repo-link {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  background-color: #333;
-  border-radius: 5px;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    width: 100%;
 }
 
 .repo-link:hover {
-  background-color: #444;
+    background-color: #444;
 }
 
 .project-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .project-info h3 {
-  font-size: 1.1em;
-  font-weight: bold;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .project-info a {
-  color: #1e90ff;
-  text-decoration: none;
-  font-size: 0.9em;
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 0.9em;
 }
 
 .project-info a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .scroll-item iframe {
-  width: 100%;
-  height: 200px;
-  border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 20px;
-  animation: fadeInUp 2s ease;
-}
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
 
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
 
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @keyframes slideInRight {
-  from {
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
 
-  to {
-    transform: translateZ(0);
-  }
+    to {
+        transform: translateZ(0);
+    }
 }
 
 @keyframes slideInLeft {
-  from {
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
 
-  to {
-    transform: translateZ(0);
-  }
+    to {
+        transform: translateZ(0);
+    }
 }

@@ -1,0 +1,23 @@
+footer {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+footer a{
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+
+footer img {
+    text-decoration: none;
+    width: 43px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Add spacing between icons */
+}

@@ -1,0 +1,24 @@
+header {
+    background: #1a1a1d;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header a{
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+
+header img {
+    text-decoration: none;
+    width: 23px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Add spacing between icons */
+}
