@@ -5,7 +5,7 @@
     border-radius: 5px;
     border: 1px solid #0f0f0f;
     padding: 20px;
-    text-align: left; /* Align content to the left */
+    text-align: left;
     background: #1a1a1d;
     position: relative;
     overflow: hidden;
@@ -13,12 +13,20 @@
     flex-direction: column;
     justify-content: space-between;
     animation: slideInLeft 2s ease;
-
 }
 
 .container-experience {
     display: flex;
     flex-wrap: wrap;
+}
+
+
+.scroll-container-experience {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    animation: slideInLeft 2s ease;
 }
 
 .scroll-item-experience .heading-container {
