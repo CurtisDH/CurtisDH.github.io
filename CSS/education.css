@@ -1,7 +1,9 @@
 .scroll-item-education {
     flex: 0 0 calc(33.33% - 20px);
-    width: 400px;
-    height: 400px;
+    max-width: 400px;
+    max-height: 500px;
+    min-height: 400px;
+    min-width: 300px;
     border-radius: 5px;
     border: 1px solid #0f0f0f;
     padding: 20px;

@@ -1,6 +1,7 @@
 .scroll-item-experience {
     flex: 0 0 calc(33.33% - 20px);
     width: 400px;
+    min-width: 300px;
     height: auto;
     border-radius: 5px;
     border: 1px solid #0f0f0f;
