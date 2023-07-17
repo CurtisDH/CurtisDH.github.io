@@ -66,6 +66,7 @@ class Project {
 
         const readMoreLink = projectElement.querySelector(".read-more");
         if (readMoreLink) {
+            console.log("HERE!! ID:" + this.uniqueId);
             readMoreLink.href = `../../HTML/Templates/projectContentPage.html?id=${this.uniqueId}`;
         }
 
@@ -80,53 +81,43 @@ class Project {
         return projectElement;
     }
 }
-// todo redesign cards to allow for a date section
-const projects = [
-    new Project(
-        "https://www.youtube.com/embed/EE9si3eyNik",
-        "https://github.com/CurtisDH/LEDVisualiserAudioClient",
-        "C# - Led Audio Visualiser",
-        true,
-        0
-    ),
-    new Project(
-        "../images/Sudoku.png",
-        "https://github.com/CurtisDH/SudokuSolver",
-        "C# - Sudoku Solver",
-        false,
-        1
-    ),
-    new Project(
-        "https://www.youtube.com/embed/pfC0CL8QjNM",
-        "",
-        "GMTK GameJam - 2020",
-        true,
-        2
-    ),
-    new Project(
-        "https://www.youtube.com/embed/XO7lElw7M-Q",
-        "",
-        "24hr 2D Game 2020",
-        true,
-        3
-    ),
-    new Project(
-        "https://www.youtube.com/embed/mr-SBXM-570",
-        "https://github.com/CurtisDH/Unity-PayPal-Integration",
-        "Unity + PayPal 2020",
-        true,
-        4
-    )
-];
-Promise.all(projects.map((project) => project.render()))
-    .then((renderedProjects) => {
-        const scrollContainer = document.querySelector(
-            ".scroll-container-projects"
-        );
-        renderedProjects.forEach((project) => {
-            scrollContainer.append(project);
-        });
-    })
-    .catch((error) => {
-        console.error("Error rendering projects:", error);
+
+// Function to fetch projects from JSON
+async function fetchProjects() {
+    const response = await fetch("../../Scripts/Content/JSON/projects.json");
+    const jsonData = await response.text();
+
+    try {
+        const projects = JSON.parse(jsonData);
+        // Proceed with rendering the projects
+        return projects;
+    } catch (error) {
+        console.error("Error parsing JSON data:", error);
+    }
+
+}
+
+// Function to render projects
+async function renderProjects() {
+    const projects = await fetchProjects();
+    const renderedProjects = await Promise.all(
+        projects.map(
+            (project) =>
+                new Project(
+                    project.embedUrl,
+                    project.githubUrl,
+                    project.name,
+                    project.video,
+                    project.id
+                ).render()
+        )
+    );
+
+    const scrollContainer = document.querySelector('.scroll-container-projects');
+    renderedProjects.forEach((project) => {
+        scrollContainer.append(project);
     });
+}
+
+// Call the renderProjects function to load and render the projects
+renderProjects();
