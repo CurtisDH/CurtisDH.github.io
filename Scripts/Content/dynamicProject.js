@@ -42,8 +42,14 @@ document.addEventListener("DOMContentLoaded", async function () {
                 dateHeader.textContent = project.date;
             }
             if (project.language) {
-                const languageHeader = document.querySelector(".language");
-                languageHeader.textContent = project.language;
+                const langContainer = document.querySelector(".language-container");
+                project.language.forEach(imgUrl => {
+                    const langImg = document.createElement("img");
+                    langImg.classList.add("language-icon");
+                    langImg.src = imgUrl;
+                    
+                    langContainer.appendChild(langImg);
+                })
             }
             if (project.githubUrl) {
                 const link = document.querySelector(".git-repo");
