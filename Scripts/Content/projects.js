@@ -6,18 +6,16 @@
 // and we also need to include the github repo if one exists.
 
 class Project {
-    constructor(embedUrl, githubUrl, title, video = true) {
+    constructor(embedUrl, githubUrl, title, video = true, uniqueId) {
         this.embedUrl = embedUrl;
         this.githubUrl = githubUrl;
         this.title = title;
         this.video = video;
+        this.uniqueId = uniqueId;
     }
 
     async render() {
-        let response = await fetch("../../HTML/Templates/projectWithVideo.html");
-        if (this.video == false) {
-            response = await fetch("../../HTML/Templates/projectWithImage.html");
-        }
+        let response = await fetch("../../HTML/Templates/projectTemplate.html");
         let template = await response.text();
         let tempDiv = document.createElement("div");
         tempDiv.innerHTML = template.trim();
@@ -61,8 +59,14 @@ class Project {
                 repoLinkElement.href = "https://github.com/CurtisDH";
 
                 // Target and modify the "GitHub Repository" text
-                repoLinkElement.textContent = "No GitHub Repository";
+                // let newText = "No" + repoLinkElement.textContent;
+                // repoLinkElement.textContent = newText;
             }
+        }
+
+        const readMoreLink = projectElement.querySelector(".read-more");
+        if (readMoreLink) {
+            readMoreLink.href = `../../HTML/Templates/projectContentPage.html?id=${this.uniqueId}`;
         }
 
         // Get the scroll-container element
@@ -76,49 +80,43 @@ class Project {
         return projectElement;
     }
 }
-
+// todo redesign cards to allow for a date section
 const projects = [
     new Project(
         "https://www.youtube.com/embed/EE9si3eyNik",
         "https://github.com/CurtisDH/LEDVisualiserAudioClient",
-        "C# - Led Audio Visualiser 2022"
+        "C# - Led Audio Visualiser",
+        true,
+        0
     ),
     new Project(
         "../images/Sudoku.png",
         "https://github.com/CurtisDH/SudokuSolver",
-        "C# - Sudoku Solver 2023",
-        false
+        "C# - Sudoku Solver",
+        false,
+        1
     ),
     new Project(
         "https://www.youtube.com/embed/pfC0CL8QjNM",
         "",
-        "GMTK GameJam - 2020"
+        "GMTK GameJam - 2020",
+        true,
+        2
     ),
     new Project(
         "https://www.youtube.com/embed/XO7lElw7M-Q",
         "",
-        "24hr 2D Game 2020"
+        "24hr 2D Game 2020",
+        true,
+        3
     ),
     new Project(
         "https://www.youtube.com/embed/mr-SBXM-570",
         "https://github.com/CurtisDH/Unity-PayPal-Integration",
-        "Unity + PayPal 2020"
-    ),
-    new Project(
-        "",
-        "https://github.com/CurtisDH/SpigotAutoSort",
-        "Java - Spigot Auto Sort 2021"
-    ),
-    new Project(
-        "",
-        "https://github.com/CurtisDH/Multi-ThreadedPrimeFinder",
-        "C# - MultiThreaded Prime Finder 2021"
-    ),
-    new Project(
-        "",
-        "https://github.com/CurtisDH/ITP-2020",
-        "Unity GameDevHQ BootCamp 2020"
-    ),
+        "Unity + PayPal 2020",
+        true,
+        4
+    )
 ];
 Promise.all(projects.map((project) => project.render()))
     .then((renderedProjects) => {

@@ -1,0 +1,58 @@
+[
+  {
+    "embedUrl": "https://www.youtube.com/embed/EE9si3eyNik",
+    "githubUrl": "https://github.com/CurtisDH/LEDVisualiserAudioClient",
+    "name": "C# - Led Audio Visualiser 2022",
+    "video": true,
+    "id": 1
+  },
+  {
+    "embedUrl": "../images/Sudoku.png",
+    "githubUrl": "https://github.com/CurtisDH/SudokuSolver",
+    "name": "C# - Sudoku Solver 2023",
+    "video": false,
+    "id": 2
+  },
+  {
+    "embedUrl": "https://www.youtube.com/embed/pfC0CL8QjNM",
+    "githubUrl": "",
+    "name": "GMTK GameJam - 2020",
+    "video": true,
+    "id": 3
+  },
+  {
+    "embedUrl": "https://www.youtube.com/embed/XO7lElw7M-Q",
+    "githubUrl": "",
+    "name": "24hr 2D Game 2020",
+    "video": true,
+    "id": 4
+  },
+  {
+    "embedUrl": "https://www.youtube.com/embed/mr-SBXM-570",
+    "githubUrl": "https://github.com/CurtisDH/Unity-PayPal-Integration",
+    "name": "Unity + PayPal 2020",
+    "video": true,
+    "id": 5
+  },
+  {
+    "embedUrl": "",
+    "githubUrl": "https://github.com/CurtisDH/SpigotAutoSort",
+    "name": "Java - Spigot Auto Sort 2021",
+    "video": true,
+    "id": 6
+  },
+  {
+    "embedUrl": "",
+    "githubUrl": "https://github.com/CurtisDH/Multi-ThreadedPrimeFinder",
+    "name": "C# - MultiThreaded Prime Finder 2021",
+    "video": true,
+    "id": 7
+  },
+  {
+    "embedUrl": "",
+    "githubUrl": "https://github.com/CurtisDH/ITP-2020",
+    "name": "Unity GameDevHQ BootCamp 2020",
+    "video": true,
+    "id": 8
+  }
+]

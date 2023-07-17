@@ -1,6 +1,6 @@
 .scroll-item-projects {
     flex: 0 0 auto;
-
+    border: 1px solid #0f0f0f;
     border-radius: 5px;
     text-align: center;
     background: #1a1a1d;
@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 25%;
+    height: 25%;
 }
 
 
@@ -25,11 +27,14 @@
     align-items: center;
     gap: 5px;
     color: white;
+    text-align: center;
     text-decoration: none;
+    justify-content: center;
     padding: 10px;
     background-color: #333;
     border-radius: 5px;
-    width: 100%;
+    height: 45px;
+    width: 50%;
 }
 
 .repo-link:hover {
@@ -39,23 +44,34 @@
 .read-more {
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     gap: 5px;
     color: white;
     text-decoration: none;
     padding: 10px;
     background-color: #333;
     border-radius: 5px;
-    width: 100%;
+    height: 45px;
+    width: 50%;
 }
 
 .read-more:hover {
     background-color: #444;
 }
 
+/*TODO, repeating for read-more and repo is probably unnecessary */
+
+.github-logo {
+    width: 25%;
+    margin: 1%;
+}
+
 
 .project-button-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     gap: 5px;
     width: 100%;
@@ -96,6 +112,15 @@
     height: 200px;
     padding-bottom: 56.25%;
     overflow: hidden;
+}
+
+.video-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-container iframe {
