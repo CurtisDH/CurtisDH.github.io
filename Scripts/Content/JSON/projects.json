@@ -14,12 +14,12 @@
     ]
   },
   {
-    "embedUrl": "../images/Sudoku.png",
+    "embedUrl": "../../images/AiGen/Sudoku.png",
     "githubUrl": "https://github.com/CurtisDH/SudokuSolver",
-    "name": "C# - Sudoku Solver 2023",
+    "name": "Sudoku Solver",
     "video": false,
     "id": 2,
-    "description": "",
+    "description": "Solves Sudoku puzzles utilising a brute force DFS (Depth First Search) algorithm,\nincludes functionality to generate valid, solvable Sudoku puzzles of varying difficulty",
     "date": "2023",
     "language": [
       "../../images/Skills/Languages/c-sharp.svg",
@@ -27,12 +27,65 @@
     ]
   },
   {
+    "embedUrl": "../../images/AiGen/web-resume.png",
+    "githubUrl": "https://github.com/CurtisDH/curtisdh.github.io",
+    "name": "Web Resume",
+    "video": false,
+    "id": 3,
+    "description": "A small website created to display up to date information\nabout my projects and other information that I find relevant to share",
+    "date": "2023",
+    "language": [
+      "../../images/Skills/Webstacks/css-3.svg",
+      "../../images/Skills/Webstacks/html-5.svg",
+      "../../images/Skills/Languages/javascript.svg"
+    ]
+  },
+  {
+    "embedUrl": "../../images/AiGen/auto-sort.png",
+    "githubUrl": "https://github.com/CurtisDH/SpigotAutoSort",
+    "name": "Java - Spigot Auto Sort",
+    "video": false,
+    "id": 4,
+    "description": " Uses SpigotMC to write custom plugins, this particular plugin is designed to\nsearch x radius of chunks for specific entities and then sorts them based on the contents.",
+    "date": "2021",
+    "language": [
+      "../../images/Skills/Languages/java.svg"
+    ]
+  },
+  {
+    "embedUrl": "../../images/AiGen/primefractal.png",
+    "githubUrl": "https://github.com/CurtisDH/Multi-ThreadedPrimeFinder",
+    "name": "MultiThreaded Prime Finder",
+    "video": false,
+    "id": 5,
+    "description": "This is a multi-threaded program which has been designed to efficiency find prime\nnumbers given n as a target input",
+    "date": "2021",
+    "language": [
+      "../../images/Skills/Languages/c-sharp.svg",
+      "../../images/Skills/Frameworks/dotnet.svg"
+    ]
+  },
+  {
+    "embedUrl": "../../images/AiGen/gamedev-bootcamp.png",
+    "githubUrl": "https://github.com/CurtisDH/ITP-2020",
+    "name": "Unity GameDevHQ BootCamp",
+    "video": false,
+    "id": 6,
+    "description": "This was a Tower Defense game built during my GameDev BootCamp. It\ninvolved designing editor tools to streamline unit creation, wave creation, and utilised\nprogramming design patterns such as Singletons, and Object Pooling for efficiency",
+    "date": "2020",
+    "language": [
+      "../../images/Skills/Languages/c-sharp.svg",
+      "../../images/Skills/Frameworks/unity.svg",
+      "../../images/Skills/Frameworks/dotnet.svg"
+    ]
+  },
+  {
     "embedUrl": "https://www.youtube.com/embed/pfC0CL8QjNM",
     "githubUrl": "",
-    "name": "GMTK GameJam",
+    "name": "GMTK GameJam 2020",
     "video": true,
-    "id": 3,
-    "description": "",
+    "id": 7,
+    "description": "placeholder desc -- Theme Out of Control",
     "date": "2020",
     "language": [
       "../../images/Skills/Languages/c-sharp.svg",
@@ -43,9 +96,9 @@
   {
     "embedUrl": "https://www.youtube.com/embed/XO7lElw7M-Q",
     "githubUrl": "",
-    "name": "24hr 2D Game 2020",
+    "name": "24hr 2D GameJam 2020",
     "video": true,
-    "id": 4,
+    "id": 8,
     "description": "placeholder desc",
     "date": "2020",
     "language": [
@@ -59,47 +112,8 @@
     "githubUrl": "https://github.com/CurtisDH/Unity-PayPal-Integration",
     "name": "Unity + PayPal",
     "video": true,
-    "id": 5,
-    "description": "placeholder desc",
-    "date": "2020",
-    "language": [
-      "../../images/Skills/Languages/c-sharp.svg",
-      "../../images/Skills/Frameworks/unity.svg",
-      "../../images/Skills/Frameworks/dotnet.svg"
-    ]
-  },
-  {
-    "embedUrl": "",
-    "githubUrl": "https://github.com/CurtisDH/SpigotAutoSort",
-    "name": "Java - Spigot Auto Sort",
-    "video": true,
-    "id": 6,
-    "description": "placeholder desc",
-    "date": "2021",
-    "language": [
-      "../../images/Skills/Languages/java.svg"
-    ]
-  },
-  {
-    "embedUrl": "",
-    "githubUrl": "https://github.com/CurtisDH/Multi-ThreadedPrimeFinder",
-    "name": "MultiThreaded Prime Finder",
-    "video": true,
-    "id": 7,
-    "description": "",
-    "date": "2021",
-    "language": [
-      "../../images/Skills/Languages/c-sharp.svg",
-      "../../images/Skills/Frameworks/dotnet.svg"
-    ]
-  },
-  {
-    "embedUrl": "",
-    "githubUrl": "https://github.com/CurtisDH/ITP-2020",
-    "name": "Unity GameDevHQ BootCamp",
-    "video": true,
-    "id": 8,
-    "description": "placeholder desc",
+    "id": 9,
+    "description": "This implementation integrates in-game UI with PayPal to allow for users\nto make a purchase which will then perform X action in game.",
     "date": "2020",
     "language": [
       "../../images/Skills/Languages/c-sharp.svg",

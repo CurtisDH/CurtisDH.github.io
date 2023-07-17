@@ -30,6 +30,13 @@ document.addEventListener("DOMContentLoaded", async function () {
                 videoContainer.appendChild(videoIframe);
             } else {
                 // show the img of the project instead. 
+                const videoContainer = document.querySelector(".video-container");
+                const imgFrame = document.createElement("img");
+                imgFrame.src = project.embedUrl;
+                imgFrame.width = 1024;
+                imgFrame.height = 1024;
+                imgFrame.classList.add("img-scalar");
+                // videoContainer.appendChild(imgFrame);
             }
             if (project.description) {
                 const descriptionContainer = document.querySelector(".about-project");
@@ -47,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     const langImg = document.createElement("img");
                     langImg.classList.add("language-icon");
                     langImg.src = imgUrl;
-                    
+
                     langContainer.appendChild(langImg);
                 })
             }
