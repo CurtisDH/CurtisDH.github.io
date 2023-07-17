@@ -6,12 +6,15 @@
 // and we also need to include the github repo if one exists.
 
 class Project {
-    constructor(embedUrl, githubUrl, title, video = true, uniqueId) {
+    constructor(embedUrl, githubUrl, title, video = true, uniqueId, description, devLanguage, date) {
         this.embedUrl = embedUrl;
         this.githubUrl = githubUrl;
         this.title = title;
         this.video = video;
         this.uniqueId = uniqueId;
+        this.description = description;
+        this.language = devLanguage;
+        this.date = date;
     }
 
     async render() {
@@ -108,7 +111,10 @@ async function renderProjects() {
                     project.githubUrl,
                     project.name,
                     project.video,
-                    project.id
+                    project.id,
+                    project.description,
+                    project.language,
+                    project.date
                 ).render()
         )
     );

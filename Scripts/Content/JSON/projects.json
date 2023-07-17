@@ -2,57 +2,67 @@
   {
     "embedUrl": "https://www.youtube.com/embed/EE9si3eyNik",
     "githubUrl": "https://github.com/CurtisDH/LEDVisualiserAudioClient",
-    "name": "C# - Led Audio Visualiser 2022",
+    "name": "Led Audio Visualiser",
     "video": true,
-    "id": 1
+    "id": 1,
+    "description": "Takes an incoming stream of audio runs it through a fast fourier transform\nalgorithm, then sends it over Wi-Fi to a receiver (e.g. ESP8266 Microcontroller) and\nvisualises it physically through an array of 150 LEDs. The client has been written in\nC# and C, utilsing WSAPI (windows) and the ALSA PulseAudio API (Linux & limited\nandroid support)",
+    "date": "2022",
+    "language": "C# (.NET core 6 & WSAPI) | C (ALSA Pulseaudio api) "
   },
   {
     "embedUrl": "../images/Sudoku.png",
     "githubUrl": "https://github.com/CurtisDH/SudokuSolver",
     "name": "C# - Sudoku Solver 2023",
     "video": false,
-    "id": 2
+    "id": 2,
+    "description": "placeholder desc"
   },
   {
     "embedUrl": "https://www.youtube.com/embed/pfC0CL8QjNM",
     "githubUrl": "",
     "name": "GMTK GameJam - 2020",
     "video": true,
-    "id": 3
+    "id": 3,
+    "description": "placeholder desc"
   },
   {
     "embedUrl": "https://www.youtube.com/embed/XO7lElw7M-Q",
     "githubUrl": "",
     "name": "24hr 2D Game 2020",
     "video": true,
-    "id": 4
+    "id": 4,
+    "description": "placeholder desc"
   },
   {
     "embedUrl": "https://www.youtube.com/embed/mr-SBXM-570",
     "githubUrl": "https://github.com/CurtisDH/Unity-PayPal-Integration",
     "name": "Unity + PayPal 2020",
     "video": true,
-    "id": 5
+    "id": 5,
+    "description": "placeholder desc"
   },
   {
     "embedUrl": "",
     "githubUrl": "https://github.com/CurtisDH/SpigotAutoSort",
     "name": "Java - Spigot Auto Sort 2021",
     "video": true,
-    "id": 6
+    "id": 6,
+    "description": "placeholder desc"
   },
   {
     "embedUrl": "",
     "githubUrl": "https://github.com/CurtisDH/Multi-ThreadedPrimeFinder",
     "name": "C# - MultiThreaded Prime Finder 2021",
     "video": true,
-    "id": 7
+    "id": 7,
+    "description": "placeholder desc"
   },
   {
     "embedUrl": "",
     "githubUrl": "https://github.com/CurtisDH/ITP-2020",
     "name": "Unity GameDevHQ BootCamp 2020",
     "video": true,
-    "id": 8
+    "id": 8,
+    "description": "placeholder desc"
   }
 ]
