@@ -59,11 +59,15 @@ const education = [
         "Bachelor of Information Technology - Computer Science",
         "March 2022 - November 2023",
         [
-            "Majoring in Computer Science",
-            "Achieved GPA of 7.0 in Discrete Mathematics, Algorithms & Time Complexity",
-            "Currently undertaking: High Performance Parallel Computing, Cloud Computing (with an AWS focus), and Systems Programming (Focus on low level programming)",
+            "Majored in Computer Science",
+            "Achieved GPA of 7.0 in  the following:",
+            "Discrete Mathematics",
+            "Algorithms & Time Complexity",
+            "High Performance Parallel Computing",
+            "Cloud Computing (with an AWS focus)",
+            "and Systems Programming (Focus on low level programming)",
         ],
-        "Overall GPA 6.0"
+        "Overall GPA 6.125"
     ),
     new Education(
         "TAFE Queensland",

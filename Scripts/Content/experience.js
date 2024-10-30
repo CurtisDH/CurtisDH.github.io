@@ -1,9 +1,10 @@
 class Experience {
-    constructor(company, position, duration, descriptions) {
+    constructor(company, position, duration, descriptions, imageSrc) {
         this.company = company;
         this.position = position;
         this.duration = duration;
         this.descriptions = descriptions;
+        this.imageSrc = imageSrc;
     }
 
     async render() {
@@ -17,6 +18,7 @@ class Experience {
         const degree = element.querySelector(".position");
         const duration = element.querySelector(".duration");
         const descriptionContainer = element.querySelector(".desc-container");
+        const image = element.querySelector(".company-image-container")
 
         if (institution) {
             institution.textContent = this.company;
@@ -28,6 +30,11 @@ class Experience {
 
         if (duration) {
             duration.textContent = this.duration;
+        }
+        
+        if (image)
+        {
+            image.textContent = this.imageSrc;
         }
 
         if (descriptionContainer && this.descriptions) {
@@ -48,6 +55,20 @@ class Experience {
 }
 
 const experience = [
+    new Experience(
+        "BimBeats",
+        "Software Developer",
+        "August 2023 - Present",
+        [
+            "C\# | .NET Framework & .NET 6+",
+            "Developed a centralised cloud storage solution deployed to thousands of end users",
+            "Created extensive internal unit testing suite for complex programs (e.g. Revit)",
+            "Designed and built installers, services, plug-ins and standalone WPF applications",
+            "Automated manual time consuming release, deployment and management tasks",
+            
+        ],
+        //TODO "image_src"
+    ),
     new Experience(
         "Queensland Police - Capstone",
         "Software Developer",
